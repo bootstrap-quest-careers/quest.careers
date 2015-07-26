@@ -1,0 +1,115 @@
+/*brand-primary = rgb(66, 139, 202, 1)
+brand-success = rgb(92, 184, 92, 1)
+brand-info = rgb(91, 192, 222, 1)
+brand-warning = rgb(240, 173, 78, 1)
+brand-danger = rgb(217, 83, 79, 1)
+*/
+
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+.nav {
+	display:inline-block;
+	float: none;
+}
+
+.larger {
+	font-size: 40px;
+	color : rgb(66, 139, 202);
+}
+
+
+.large {
+	font-size: 80px;
+	color : rgb(217, 83, 79);
+}
+
+
+.medium {
+	font-size: 15px;
+}
+
+/* Jumbotron*/
+.body {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 10px;
+	padding-right: 0;
+}
+.just {
+	text-align: left;
+}
+.specialjum {
+	margin-top: 0;
+	margin-bottom: 0;
+	background: url('../img/footstep.png') center;
+	color:#fff;
+	background-size: cover;
+	height: 300px;
+}
+
+/* about us style*/
+
+.aboutUs {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/* navbar bottom style*/
+
+
+.navbar-bottom {
+	min-height: 150px;
+	margin-top: 0;
+	margin-bottom: 0;
+	background-color: rgba(0, 0, 0, 0.05);
+	padding-top: 20px;
+	color:#FFFFFF;
+}
+
+.footerLinks {
+	color: white;
+	text-transform: uppercase;
+}
+
+/* The 3rd section */
+.bottom {
+	position: absolute;
+	bottom: 0;
+	margin-right: 0;
+}
+
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.info_background {
+	background-color: white;
+	color: black;
+	margin-top: 75px;
+}
