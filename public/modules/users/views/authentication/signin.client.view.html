@@ -1,4 +1,59 @@
 <section class="row" data-ng-controller="AuthenticationController">
+	<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 login-form-bg">
+		<h4 class="text-center">Login for your Quest.<i>Careers</i></h4>
+		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
+			<fieldset>
+				<div class="form-group">
+					<div data-ng-show="error" class="text-center text-danger">
+						<div class="alert alert-danger" role="alert">
+							<strong data-ng-bind="error"></strong>
+						</div>
+
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">
+							<i class="glyphicon glyphicon-user text-muted"></i>
+						</span>
+							<input type="text" id="username" name="username" class="form-control" capitalize data-ng-model="credentials.username" placeholder="User Name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon2">
+							<i class="glyphicon glyphicon-lock text-muted"></i>
+						</span>
+						<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+					</div>
+				</div>
+
+				<div class="text-center form-group">
+					<button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+
+				</div>
+				<div class="forgot-password">
+					<a href="/#!/password/forgot">Forgot your password?</a>&nbsp; or &nbsp;&nbsp;
+					<a href="/#!/signup">Sign up</a>
+				</div>
+			</fieldset>
+		</form>
+
+		<hr/>
+		<div class="text-center">
+			<p>Sign in using</p>
+			<a href="/auth/linkedin" class="undecorated-link">
+				<img class="resizeSocial" src="/modules/users/img/buttons/linkedin.png">
+			</a>
+		</div>
+
+	</div>
+
+</section>
+
+<!--
+
+<section class="row" data-ng-controller="AuthenticationController">
 	<h2 class="col-md-12 text-center">Sign in using your existing accounts</h2>
 	<div class="col-md-12 text-center">
 		<a href="/auth/facebook" class="undecorated-link">
@@ -13,8 +68,8 @@
 		<a href="/auth/linkedin" class="undecorated-link">
 			<img src="/modules/users/img/buttons/linkedin.png">
 		</a>
-		<!-- <a href="/auth/github" class="undecorated-link">
-			<img src="/modules/users/img/buttons/github.png"> -->
+		 <a href="/auth/github" class="undecorated-link">
+			<img src="/modules/users/img/buttons/github.png">
 		</a>
 	</div>
 	<h3 class="col-md-12 text-center">Or with your account</h3>
@@ -43,3 +98,5 @@
 		</form>
 	</div>
 </section>
+
+-->

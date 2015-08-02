@@ -40,10 +40,12 @@ exports.forgot = function(req, res, next) {
 							message: 'It seems like you signed up using your ' + user.provider + ' account'
 						});
 					} else {
+
 						user.resetPasswordToken = token;
 						user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
 
 						user.save(function(err) {
+							// THERE IS A ISSUE HERE ON RESET OF THE USER PASSWORD
 							done(err, token, user);
 						});
 					}

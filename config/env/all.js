@@ -3,8 +3,8 @@
 module.exports = {
 	app: {
 		title: 'quest.careers',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-		keywords: 'MongoDB, Express, AngularJS, Node.js'
+		description: 'Your quest for careers',
+		keywords: 'Career, Job, IT, Employment'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',

@@ -1,4 +1,237 @@
 <section class="row" data-ng-controller="AuthenticationController">
+	<div class="col-xs-offset-1 col-xs-10 login-form-bg">
+		<h4 class="text-center">Start your Quest.<i>Careers</i></h4>
+		<form name="userForm" data-ng-submit="signup()" class="signin" novalidate autocomplete="off">
+			<fieldset>
+				<div class="row">
+					<div class="form-group">
+						<div data-ng-show="error" class="text-center text-danger">
+							<div class="alert alert-danger" role="alert">
+								<strong data-ng-bind="error"></strong>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 text-center">
+						<i class="glyphicon glyphicon-send  cust-profile" ng-class = "{'text-success' : credentials.termsAgreed, 'text-danger' : !credentials.termsAgreed}"></i>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon1">
+									<i class="glyphicon glyphicon-star text-muted"></i>
+								</span>
+								<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon2">
+									<i class="glyphicon glyphicon-star text-muted"></i>
+								</span>
+								<input type="text" required id="lastName" name="lastName" class="form-control" data-ng-model="credentials.lastName" placeholder="Last Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon3">
+									<i class="glyphicon glyphicon-envelope text-muted"></i>
+								</span>
+								<input required type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon4">
+									<i class="glyphicon glyphicon-map-marker text-muted"></i>
+								</span>
+								<input type="text" id="currentLocation" name="currentLocation" class="form-control" data-ng-model="credentials.currentLocation" placeholder="Current Location">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6 col-sm-push-6">
+						<div class="form-group">
+							<div class="input-group">
+							<span class="input-group-addon" id="basic-addon5">
+									<i class="glyphicon glyphicon-phone text-muted"></i>
+							</span>
+								<input required type="text" id="phone" name="phone" class="form-control" data-ng-model="credentials.phone" placeholder="Phone">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+							<span class="input-group-addon" id="basic-addon6">
+									<i class="glyphicon glyphicon-phone-alt text-muted"></i>
+							</span>
+								<input type="text" id="phoneAlt" name="phoneAlt" class="form-control" data-ng-model="credentials.phoneAlt" placeholder="Alternative Phone">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-sm-pull-6">
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon7">
+									<i class="glyphicon glyphicon-user text-muted"></i>
+								</span>
+								<input type="text" id="username" required name="username" class="form-control" capitalize data-ng-model="credentials.username" placeholder="User Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<span class="input-group-addon" id="basic-addon8">
+									<i class="glyphicon glyphicon-asterisk text-muted"></i>
+								</span>
+								<input type="password" id="password" required name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="checkbox text-center">
+						<label>
+							<input id="termsAgreed" required name="termsAgreed" data-ng-model="credentials.termsAgreed" type="checkbox"> I have read and agree to Quest.<i>Careers'</i> <a href="#">Terms of use</a> and <a href="#">Privacy statement</a> .
+						</label>
+					</div>
+					<br/>
+				</div>
+				<div class="row">
+						<div class="text-center form-group">
+							<button type="submit" class="btn btn-large btn-primary btn-block" ng-disabled="userForm.$invalid">Sign up</button>
+						</div>
+				</div>
+			</fieldset>
+		</form>
+		<hr/>
+		<div class="text-center">
+			<p class="text-center">Sign up using</p>
+			<a href="/auth/linkedin" class="undecorated-link">
+				<img class="resizeSocial" src="/modules/users/img/buttons/linkedin.png">
+			</a>
+			&nbsp; or&nbsp;
+			<a href="/#!/signin" class="show-signup">Sign in</a>
+		</div>
+
+	</div>
+</section>
+
+
+
+
+<!--
+<section class="row" data-ng-controller="AuthenticationController">
+
+	<div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 login-form-bg">
+
+		<h4 class="text-center">Start your Quest.<i>Careers</i></h4>
+		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
+			<fieldset>
+				<div class="form-group">
+					<div data-ng-show="error" class="text-center text-danger">
+						<div class="alert alert-danger" role="alert">
+							<strong data-ng-bind="error"></strong>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">
+							<i class="glyphicon glyphicon-star text-muted"></i>
+						</span>
+							<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
+					</div>
+
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon2">
+									<i class="glyphicon glyphicon-star text-muted"></i>
+						</span>
+						<input type="text" required id="lastName" name="lastName" class="form-control" data-ng-model="credentials.lastName" placeholder="Last Name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3">
+									<i class="glyphicon glyphicon-envelope text-muted"></i>
+						</span>
+						<input required type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon4">
+									<i class="glyphicon glyphicon-map-marker text-muted"></i>
+						</span>
+						<input type="text" id="location" name="location" class="form-control" data-ng-model="credentials.location" placeholder="Current Location">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon5">
+									<i class="glyphicon glyphicon-phone text-muted"></i>
+						</span>
+						<input required type="text" id="phone" name="phone" class="form-control" data-ng-model="credentials.phone" placeholder="Phone">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon6">
+									<i class="glyphicon glyphicon-phone-alt text-muted"></i>
+						</span>
+						<input type="text" id="phoneAlt" name="phoneAlt" class="form-control" data-ng-model="credentials.phoneAlt" placeholder="Alternative Phone">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon7">
+							<i class="glyphicon glyphicon-user text-muted"></i>
+						</span>
+						<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon8">
+							<i class="glyphicon glyphicon-asterisk text-muted"></i>
+						</span>
+						<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+					</div>
+				</div>
+
+				<div class="text-center form-group">
+					<button type="submit" class="btn btn-large btn-primary btn-block">Sign up</button>
+				</div>
+			</fieldset>
+		</form>
+		<hr/>
+		<div class="text-center">
+			<p class="text-center">Sign up using</p>
+			<a href="/auth/linkedin" class="undecorated-link">
+				<img class="resizeSocial" src="/modules/users/img/buttons/linkedin.png">
+			</a>
+			&nbsp; or&nbsp;
+			<a href="/#!/signin" class="show-signup">Sign in</a>
+		</div>
+
+	</div>
+</section>
+
+
+-->
+
+<!--
+
+
+
+
+
+<section class="row" data-ng-controller="AuthenticationController">
 	<h3 class="col-md-12 text-center">Sign up using your social accounts</h3>
 	<div class="col-md-12 text-center">
 		<a href="/auth/facebook" class="undecorated-link">
@@ -52,3 +285,5 @@
 		</form>
 	</div>
 </section>
+
+-->

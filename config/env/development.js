@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://devdbuser:1234qwer@ds047722.mongolab.com:47722/dev-questdb?authSource=dev-questdb',
-	//db: 'mongodb://localhost/dev-quest-careers-db',
+	//db: 'mongodb://devdbuser:1234qwer@ds047722.mongolab.com:47722/dev-questdb?authSource=dev-questdb',
+	db: 'mongodb://localhost/dev-quest-careers-db',
 
 	app: {
 		title: 'quest.careers - Development Environment'

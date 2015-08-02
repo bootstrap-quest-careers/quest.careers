@@ -44,13 +44,36 @@ var UserSchema = new Schema({
 	email: {
 		type: String,
 		trim: true,
-		default: '',
+		unique: 'Email ID already in use, please signin or follow forget password',
 		validate: [validateLocalStrategyProperty, 'Please fill in your email'],
 		match: [/.+\@.+\..+/, 'Please fill a valid email address']
 	},
+	currentLocation: {
+		type: String,
+		trim: true
+	},
+	phone: {
+		type: String,
+		trim: true,
+		default: '',
+		validate: [validateLocalStrategyProperty, 'Please fill in your primary phone']
+	},
+	phoneAlt: {
+		type: String,
+		trim: true
+	},
+	termsAgreed: {
+		type: Boolean,
+		validate: [validateLocalStrategyProperty, 'Please agree the Terms & Conditions']
+	},
+	professionalProfileExists: {
+		type: Boolean,
+		default: false
+	},
 	username: {
 		type: String,
-		unique: 'testing error message',
+		uppercase: true,
+		unique: 'User Name is already taken',
 		required: 'Please fill in a username',
 		trim: true
 	},
@@ -75,6 +98,7 @@ var UserSchema = new Schema({
 		}],
 		default: ['user']
 	},
+
 	updated: {
 		type: Date
 	},
@@ -91,6 +115,8 @@ var UserSchema = new Schema({
 	}
 });
 
+
+
 /**
  * Hook a pre save method to hash the password
  */
@@ -99,7 +125,10 @@ UserSchema.pre('save', function(next) {
 		this.salt = new Buffer(crypto.randomBytes(16).toString('base64'), 'base64');
 		this.password = this.hashPassword(this.password);
 	}
-
+	/* if (this.username){
+		this.username =
+		console.log('My user name -- ' + this.username);
+	}*/
 	next();
 });
 

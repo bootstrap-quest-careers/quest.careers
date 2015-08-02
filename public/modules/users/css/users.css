@@ -12,3 +12,35 @@
 	right: 10px;
 	position: absolute;
 }
+
+.login-form-bg{
+	background-color: whitesmoke;
+	border: 15px solid;
+	border-radius: 15px;
+	border-color: whitesmoke;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.password-reset-form-bg{
+	background-color: whitesmoke;
+	border: 15px solid;
+	border-radius: 15px;
+	border-color: whitesmoke;
+
+}
+
+.update-btn {
+	width:50%;
+}
+
+
+.resizeSocial {
+	width: 35px;
+	height: auto;
+}
+
+.cust-profile {
+	font-size: 120px;
+	padding-top: 7%;
+}
