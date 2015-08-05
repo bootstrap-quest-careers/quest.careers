@@ -47,12 +47,14 @@
 
 .bgimg_signUp {
 	background-image: url('../img/page_learnmore.png');
-	background-size: cover;
+	background-size: contain;
+	min-height:100%;
 }
 
 .bgimg_signIn {
 	background-image: url('../img/signInGraphic.png');
-	background-size: cover;
+	background-size: contain;
+	min-height:100%;
 }
 
 .resizeSocial {

@@ -1,5 +1,26 @@
 .bgimg_profile {
+    padding-top: 50px;
     background-image: url('../img/profile.png');
     background-size: cover;
 }
 
+.profile_height{
+    height: 500px;
+
+}
+
+.background_transp {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+
+}
+
+
+.bgimg_profile {
+    background-image: url('../img/profile.png');
+    background-size: cover;
+
+}
