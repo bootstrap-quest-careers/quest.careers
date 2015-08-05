@@ -1,6 +1,7 @@
 <section class="row" data-ng-controller="AuthenticationController">
-	<div class="col-xs-offset-1 col-xs-10 login-form-bg">
-		<h4 class="text-center">Start your Quest.<i>Careers</i></h4>
+	<div class="container-fluid bgimg_signUp">
+	<div class="col-xs-offset-1 col-xs-10">
+		<h4 class="text-center fontcolor">Start your Quest.<i>Careers</i></h4>
 		<form name="userForm" data-ng-submit="signup()" class="signin" novalidate autocomplete="off">
 			<fieldset>
 				<div class="row">
@@ -12,7 +13,8 @@
 						</div>
 					</div>
 					<div class="col-sm-6 text-center">
-						<i class="glyphicon glyphicon-send  cust-profile" ng-class = "{'text-success' : credentials.termsAgreed, 'text-danger' : !credentials.termsAgreed}"></i>
+						<i class="glyphicon glyphicon-log-in cust-profile" ng-class = "{'text-success' : credentials.termsAgreed, 'text-primary' : !credentials.termsAgreed}"></i>
+
 					</div>
 					<div class="col-sm-6">
 						<div class="form-group">
@@ -92,7 +94,10 @@
 				<div class="row">
 					<div class="checkbox text-center">
 						<label>
-							<input id="termsAgreed" required name="termsAgreed" data-ng-model="credentials.termsAgreed" type="checkbox"> I have read and agree to Quest.<i>Careers'</i> <a href="#">Terms of use</a> and <a href="#">Privacy statement</a> .
+							<input id="termsAgreed" required name="termsAgreed" data-ng-model="credentials.termsAgreed" type="checkbox">
+							<span class="fontcolor">
+								I have read and agree to Quest.<i>Careers'</i> <a href="#">Terms of use</a> and <a href="#">Privacy statement</a> .
+							</span>
 						</label>
 					</div>
 					<br/>
@@ -106,14 +111,15 @@
 		</form>
 		<hr/>
 		<div class="text-center">
-			<p class="text-center">Sign up using</p>
+			<p class="text-center fontcolor">Sign up using</p>
 			<a href="/auth/linkedin" class="undecorated-link">
 				<img class="resizeSocial" src="/modules/users/img/buttons/linkedin.png">
 			</a>
 			&nbsp; or&nbsp;
-			<a href="/#!/signin" class="show-signup">Sign in</a>
+			<a href="/#!/signin" class="show-signup fontcolor">Sign in</a>
 		</div>
 
+	</div>
 	</div>
 </section>
 

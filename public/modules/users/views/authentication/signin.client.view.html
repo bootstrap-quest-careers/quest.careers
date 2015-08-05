@@ -1,8 +1,13 @@
 <section class="row" data-ng-controller="AuthenticationController">
-	<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 login-form-bg">
-		<h4 class="text-center">Login for your Quest.<i>Careers</i></h4>
+<div class="container-fluid bgimg_signIn">
+	<div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+		<h4 class="text-center fontcolor">Login for your Quest.<i>Careers</i></h4>
 		<form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
 			<fieldset>
+				<div class="form-group text-center log-img text-primary">
+					<i class="glyphicon glyphicon-log-in"></i>
+				</div>
+
 				<div class="form-group">
 					<div data-ng-show="error" class="text-center text-danger">
 						<div class="alert alert-danger" role="alert">
@@ -11,6 +16,7 @@
 
 					</div>
 				</div>
+
 				<div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon" id="basic-addon1">
@@ -29,18 +35,19 @@
 				</div>
 
 				<div class="text-center form-group">
-					<button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+					<button type="submit" class="btn btn-primary btn-lg btn-block fontcolor">Sign in</button>
 
 				</div>
-				<div class="forgot-password">
-					<a href="/#!/password/forgot">Forgot your password?</a>&nbsp; or &nbsp;&nbsp;
-					<a href="/#!/signup">Sign up</a>
+				<div class="forgot-password text-center">
+					<a href="/#!/password/forgot">
+						<span class="fontcolor">Forgot your password?</span></a><span class="fontcolor">&nbsp; or &nbsp;&nbsp;</span>
+					<a href="/#!/signup"><span class="fontcolor">Sign up</span></a>
 				</div>
 			</fieldset>
 		</form>
 
 		<hr/>
-		<div class="text-center">
+		<div class="text-center fontcolor">
 			<p>Sign in using</p>
 			<a href="/auth/linkedin" class="undecorated-link">
 				<img class="resizeSocial" src="/modules/users/img/buttons/linkedin.png">
@@ -48,6 +55,7 @@
 		</div>
 
 	</div>
+</div>
 
 </section>
 

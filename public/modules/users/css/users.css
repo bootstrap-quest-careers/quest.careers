@@ -13,6 +13,10 @@
 	position: absolute;
 }
 
+.fontcolor{
+	color: white;
+}
+
 .login-form-bg{
 	background-color: whitesmoke;
 	border: 15px solid;
@@ -34,6 +38,22 @@
 	width:50%;
 }
 
+.resizeQuest{
+	width:60%;
+	height: auto;
+	padding-top: 5%;
+	padding-bottom: 3%;
+}
+
+.bgimg_signUp {
+	background-image: url('../img/page_learnmore.png');
+	background-size: cover;
+}
+
+.bgimg_signIn {
+	background-image: url('../img/signInGraphic.png');
+	background-size: cover;
+}
 
 .resizeSocial {
 	width: 35px;
@@ -44,3 +64,7 @@
 	font-size: 120px;
 	padding-top: 7%;
 }
+
+.log-img {
+	font-size: 120px;
+	}
